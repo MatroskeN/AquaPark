@@ -8,7 +8,13 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="fonts/stylesheet.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />    <title>Task</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />    
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <title>Task</title>
 </head>
 <body>
     <header>
@@ -89,7 +95,53 @@
             </div>
         </div>
         <div class="services">
+            <h2 class="services_title">
+                Наши услуги
+            </h2>
+            <div class="services_slider">
+                <div class="services_navigation">
+                    <img class="services_prev" src="img/icons/Arrow3.svg" alt="arrow">
+                    <img class="services_next" src="img/icons/Arrow4.svg" alt="arrow">
+                </div>
+                <div class="swiper-container services_container" id="slideMain">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide slider">
+                        <img src="img/icons/vodny_gorky.svg" alt="vodny_gorky">
+                        <p>Водные горки</p>
+                      </div>
+                      <div class="swiper-slide slider">
+                        <img src="img/icons/detskyattrak.svg" alt="vodny_gorky">
+                        <p>Детские аттракционы</p>
+                      </div> 
+                      <div class="swiper-slide slider">
+                        <img src="img/icons/relax.svg" alt="vodny_gorky">
+                        <p>Зона релаксации и джакузи</p>
+                      </div> 
+                      <div class="swiper-slide slider">
+                        <img src="img/icons/ychebny.svg" alt="vodny_gorky">
+                        <p>Учебный бассейн</p>
+                      </div> 
+                      <div class="swiper-slide slider">
+                        <img src="img/icons/open space.svg" alt="vodny_gorky">
+                        <p>Открытый бассейн</p>
+                      </div> 
+                      <div class="swiper-slide slider">
+                        <img src="img/icons/sauna.svg" alt="vodny_gorky">
+                        <p>Хаммам и сауна</p>
+                      </div> 
+                      <div class="swiper-slide slider">
+                        <img src="img/icons/igrovoy zal.svg" alt="vodny_gorky">
+                        <p>Игровой зал</p>
+                      </div> 
+                      <div class="swiper-slide slider">
+                        <img src="img/icons/cafe_bar.svg" alt="vodny_gorky">
+                        <p>Кафе и бары</p>
+                      </div> 
+                    </div>
+                    <!-- Add Scrollbar -->
 
+                  </div>
+            </div>
         </div>
         <div class="amusement">
             <div class="amusement_text">
@@ -123,7 +175,16 @@
                 </div>
             </div>
             <div class="amusement_slider">
-
+                <div class="swiper-container kid_container" id="slideMain">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide slider">
+                        <img src="img/photo/photo.png" alt="kid">
+                      </div> 
+                      <div class="swiper-slide slider">
+                        <img src="img/photo/photo.png" alt="kid">
+                      </div> 
+                    </div>
+                  </div>
             </div>
         </div>
         <div class="tariffs">
@@ -341,5 +402,8 @@
             </div>
         </div>
     </footer>
+    <!-- scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/libs.min.js"></script>
 </body>
 </html>
