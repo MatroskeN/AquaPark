@@ -27,6 +27,7 @@
             <button class="buy_btn">
                 Купить билет
             </button>
+            <div class="m_sced">График работы</div>
             <div class="menu_items">
                 <div class="menu_item">
                     <a href="#">График работы</a>
@@ -50,11 +51,154 @@
             </div>
             <div class="burger">
                 <img class="menu_normal" src="img/icons/menu normal.svg" alt="menu">
+                <img src="img/icons/X.svg" alt="x" class="xclose">
+            </div>
+        </div>
+        <div class="header_popup">
+            <div class="desc">
+                <img src="img/photo/header_back.svg" alt="back">
+            <div class="header_column">
+                <div class="header_column_title">О Компании</div>
+                <a href="#">
+                    О нас
+                </a>
+                <a href="#">
+                    Детские дни рождения
+                </a>
+                <a href="#">
+                    Корпоративным клиентам
+                </a>
+            </div>
+            <div class="header_column">
+                <div class="header_column_title">Аквапарк</div>
+                <a href="#">
+                    Водные горки
+                </a>
+                <a href="#">
+                    Детские аттракционы
+                </a>
+                <a href="#">
+                    Релаксационный бассейн
+                </a>
+                <a href="#">
+                    Джакузи
+                </a>
+                <a href="#">
+                    Открытый бассейн с зоной отдыха
+                </a>
+                <a href="#">
+                    Учебный бассейн
+                </a>
+                <a href="#">
+                    Хаммам и сауна
+                </a>
+            </div>
+            <div class="header_column bold_column">
+                <a href="#">
+                    Правила посещения
+                </a>
+                <a href="#">
+                    Карта аквапарка
+                </a>
+                <a href="#">
+                    Спортзал
+                </a>
+                <a href="#">
+                    Акции
+                </a>
+                <a href="#">
+                    Тарифы
+                </a>
+                <a href="#">
+                    Кафе
+                </a>
+                <a href="#">
+                    Контакты
+                </a>
+            </div>
+            </div>
+            <div class="mob">
+                <div class="mob_sced">
+                    <div class="sced_title">График работы:</div>
+                    <div class="sced_content">
+                        <div class="days">
+                            <p>Пн:</p>
+                            <p>Вт-Пт</p>
+                            <p>Сб-Вс:</p>
+                        </div>
+                        <div class="times">
+                            <p>выходной</p>
+                            <p>с 13:00 до 21:00</p>
+                            <p>с 10:00 до 21:00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mob_menu">
+                    <div class="mob_menu_items">
+                        <a href="#">Аттракционы</a>
+                        <a href="#">Тарифы</a>
+                        <a href="#">Акции</a>
+                        <a href="#">Контакты</a>
+                    </div>
+                    <div class="openable_menu">
+                        <div class="openable_menu_items">
+                            <div class="openable_title">
+                                <p>О компании</p>
+                                <img src="img/icons/close_arrow.svg" alt="arrow">
+                            </div>
+                            <div class="closed">
+                                <a href="#" class="openable_item">
+                                    О нас
+                                </a>
+                                <a href="#" class="openable_item">
+                                    Детские дни рождения
+                                </a>
+                                <a href="#" class="openable_item">
+                                    Корпоративным клиентам
+                                </a>
+                            </div>
+                        </div>
+                        <div class="openable_menu_items">
+                            <div class="openable_title">
+                                <p>Аквапарк</p>
+                                <img src="img/icons/close_arrow.svg" alt="arrow">
+                            </div>
+                            <div class="closed">
+                                <a href="#" class="openable_item">
+                                    О нас
+                                </a>
+                                <a href="#" class="openable_item">
+                                    Детские дни рождения
+                                </a>
+                                <a href="#" class="openable_item">
+                                    Корпоративным клиентам
+                                </a>
+                            </div>
+                        </div>
+                        <div class="openable_menu_items">
+                            <div class="openable_title">
+                                <p>Прочее</p>
+                                <img src="img/icons/close_arrow.svg" alt="arrow">
+                            </div>
+                            <div class="closed">
+                                <a href="#" class="openable_item">
+                                    О нас
+                                </a>
+                                <a href="#" class="openable_item">
+                                    Детские дни рождения
+                                </a>
+                                <a href="#" class="openable_item">
+                                    Корпоративным клиентам
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
     <main>
-        <div class="banner">
+        <div class="banner" id="header">
             <div class="top_vawe">
 
             </div>
@@ -125,35 +269,35 @@
                 </div>
                 <div class="swiper-container services_container" id="slideMain">
                     <div class="swiper-wrapper">
-                      <div class="swiper-slide slider">
+                      <div class="swiper-slide slider service_slider">
                         <img src="img/icons/vodny_gorky.svg" alt="vodny_gorky">
                         <p>Водные горки</p>
                       </div>
-                      <div class="swiper-slide slider">
+                      <div class="swiper-slide slider service_slider active_slider">
                         <img src="img/icons/detskyattrak.svg" alt="vodny_gorky">
                         <p>Детские аттракционы</p>
                       </div> 
-                      <div class="swiper-slide slider">
+                      <div class="swiper-slide slider service_slider">
                         <img src="img/icons/relax.svg" alt="vodny_gorky">
                         <p>Зона релаксации и джакузи</p>
                       </div> 
-                      <div class="swiper-slide slider">
+                      <div class="swiper-slide slider service_slider">
                         <img src="img/icons/ychebny.svg" alt="vodny_gorky">
                         <p>Учебный бассейн</p>
                       </div> 
-                      <div class="swiper-slide slider">
+                      <div class="swiper-slide slider service_slider">
                         <img src="img/icons/open space.svg" alt="vodny_gorky">
                         <p>Открытый бассейн</p>
                       </div> 
-                      <div class="swiper-slide slider">
+                      <div class="swiper-slide slider service_slider">
                         <img src="img/icons/sauna.svg" alt="vodny_gorky">
                         <p>Хаммам и сауна</p>
                       </div> 
-                      <div class="swiper-slide slider">
+                      <div class="swiper-slide slider service_slider">
                         <img src="img/icons/igrovoy zal.svg" alt="vodny_gorky">
                         <p>Игровой зал</p>
                       </div> 
-                      <div class="swiper-slide slider">
+                      <div class="swiper-slide slider service_slider">
                         <img src="img/icons/cafe_bar.svg" alt="vodny_gorky">
                         <p>Кафе и бары</p>
                       </div> 
@@ -164,6 +308,7 @@
             </div>
         </div>
         <div class="amusement">
+            <img src="img/side_text.png" alt="side_text" class="side_text">
             <div class="amusement_text">
                 <div class="amusement_title">
                     Детские и интерактивные аттракционы
@@ -206,30 +351,34 @@
                         <div class="slider">
                           <img src="img/photo/photo.png" alt="kid">
                         </div>
+                      </div>
+                      
                     </div>
+                    <img class="vawe" src="img/icons/element wave-2.svg" alt="vawe">
+                    <img class="vawe_bottom" src="img/icons/element wave-1.svg" alt="vawe">
                     </div>
                   </div>
-            </div>
+        </div>
         </div>
         <div class="tariffs">
             <div class="tariffs_title">
                 Тарифы
             </div>
-            <img class="taiffs_vawe" src="img/icons/element_wave-3.svg" alt="vawes">
+            <img class="tariffs_vawe" src="img/icons/element_wave-3.svg" alt="vawes">
             <div class="table-block">
                 <table>
                     <tr>
-                        <th rowspan="2">
+                        <th class="empty" rowspan="2">
                             
                         </th>
-                        <th colspan="4">
+                        <th class="black" colspan="4">
                             Понедельник-пятница
                         </th>
-                        <th colspan="4">
+                        <th class="black" colspan="4">
                             Суббота-воскресенье
                         </th>
                     </tr>
-                    <tr>
+                    <tr class="types">
                         <th>Детский</th>
                         <th>Юниор</th>
                         <th>Взрослый</th>
@@ -240,7 +389,7 @@
                         <th>Льготный</th>
                     </tr>
                     <tr>
-                        <th>Счастливый час</th>
+                        <th class="deep_blue">Счастливый час</th>
                         <td>160 ₽</td>
                         <td>240 ₽</td>
                         <td>320 ₽</td>
@@ -251,7 +400,7 @@
                         <td>-</td>
                     </tr>
                     <tr>
-                        <th>Продленка</th>
+                        <th class="deep_blue">Продленка</th>
                         <td>320 ₽</td>
                         <td>320 ₽</td>
                         <td>700 ₽</td>
@@ -262,7 +411,7 @@
                         <td>-</td>
                     </tr>
                     <tr>
-                        <th>4+ часа</th>
+                        <th class="deep_blue">4+ часа</th>
                         <td>540 ₽</td>
                         <td>720 ₽</td>
                         <td>900 ₽</td>
@@ -273,7 +422,7 @@
                         <td>Скидка 15%</td>
                     </tr>
                     <tr>
-                        <th>Безлимитный</th>
+                        <th class="deep_blue">Безлимитный</th>
                         <td>710 ₽</td>
                         <td>940 ₽</td>
                         <td>1170 ₽</td>
@@ -282,6 +431,96 @@
                         <td>1040 ₽</td>
                         <td>1300 ₽</td>
                         <td>Скидка 15%</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="mtable_block">
+                <table>
+                    <tr>
+                        <th rowspan="2" align="center">
+                            Тарифы
+                        </th>
+                        <th colspan="4">
+                            Понедельник-пятница
+                        </th>
+                    </tr>
+                    <tr>
+                        <td class="light_blue">Детский</td>
+                        <td class="light_blue">Юниор</td>
+                        <td class="light_blue">Взрослый</td>
+                        <td class="light_blue">Льготный</td>
+                    </tr>
+                    <tr>
+                        <td class="green">Cчастливый час</td>
+                        <td class="green">160 ₽</td>
+                        <td class="green">240 ₽</td>
+                        <td class="green">320 ₽</td>
+                        <td class="green">-</td>
+                    </tr>
+                    <tr>
+                        <td class="green">Продлёнка</td>
+                        <td class="green">320 ₽</td>
+                        <td class="green">320 ₽</td>
+                        <td class="green">700 ₽</td>
+                        <td class="green">-</td>
+                    </tr>
+                    <tr>
+                        <td class="green">4+ часа</td>
+                        <td class="green">540 ₽</td>
+                        <td class="green">720 ₽</td>
+                        <td class="green">900 ₽</td>
+                        <td class="green">Скидка 15%</td>
+                    </tr>
+                    <tr>
+                        <td class="green">Безлимитный</td>
+                        <td class="green">710 ₽</td>
+                        <td class="green">940 ₽</td>
+                        <td class="green">1170 ₽</td>
+                        <td class="green">Скидка 15%</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th rowspan="2" align="center">
+                            Тарифы
+                        </th>
+                        <th colspan="4">
+                            Понедельник-пятница
+                        </th>
+                    </tr>
+                    <tr>
+                        <td class="light_blue">Детский</td>
+                        <td class="light_blue">Юниор</td>
+                        <td class="light_blue">Взрослый</td>
+                        <td class="light_blue">Льготный</td>
+                    </tr>
+                    <tr>
+                        <td class="green">Cчастливый час</td>
+                        <td class="green">160 ₽</td>
+                        <td class="green">240 ₽</td>
+                        <td class="green">320 ₽</td>
+                        <td class="green">-</td>
+                    </tr>
+                    <tr>
+                        <td class="green">Продлёнка</td>
+                        <td class="green">320 ₽</td>
+                        <td class="green">320 ₽</td>
+                        <td class="green">700 ₽</td>
+                        <td class="green">-</td>
+                    </tr>
+                    <tr>
+                        <td class="green">4+ часа</td>
+                        <td class="green">540 ₽</td>
+                        <td class="green">720 ₽</td>
+                        <td class="green">900 ₽</td>
+                        <td class="green">Скидка 15%</td>
+                    </tr>
+                    <tr>
+                        <td class="green">Безлимитный</td>
+                        <td class="green">710 ₽</td>
+                        <td class="green">940 ₽</td>
+                        <td class="green">1170 ₽</td>
+                        <td class="green">Скидка 15%</td>
                     </tr>
                 </table>
             </div>
@@ -402,22 +641,35 @@
         </div>
         <div class="footer_wrapper">
             <div class="anchor">
-                <a href="#"><img src="img/icons/anchor.svg" alt="anchor"></a>
+                <a href="#anchor">
+                    <img src="img/icons/anchor.svg" alt="anchor">
+                </a>
             </div>
             <div class="footer_column first_column">
-                <img class="logo_footer" src="img/logo/logo footer.svg" alt="logo">
+                <a href="#">
+                    <img class="logo_footer" src="img/logo/logo footer.svg" alt="logo">
+                </a>
                 <h2 class="sub_logo">
                     Лучшее место для отдыха всей семьи в центре Саратова.
                 </h2>
                 <div class="social_links">
-                    <a href="">
-                        <img src="img/icons/facebook.svg" alt="facebook">
+                    <a href="#">
+                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 10.5C21 4.70039 16.2996 0 10.5 0C4.70039 0 0 4.70039 0 10.5C0 16.2996 4.70039 21 10.5 21C10.5615 21 10.623 21 10.6846 20.9959V12.8256H8.42871V10.1965H10.6846V8.26055C10.6846 6.01699 12.0545 4.79473 14.0561 4.79473C15.0158 4.79473 15.8402 4.86445 16.0781 4.89727V7.24336H14.7C13.6131 7.24336 13.3998 7.76016 13.3998 8.51895V10.1924H16.0043L15.6639 12.8215H13.3998V20.5939C17.7885 19.3348 21 15.2947 21 10.5V10.5Z" fill="white"/>
+                        </svg>
                     </a>
-                    <a href="">
-                        <img src="img/icons/instagram.svg" alt="instagram">
+                    <a href="#">
+                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.5098 10.5C12.5098 11.61 11.61 12.5098 10.5 12.5098C9.39001 12.5098 8.49023 11.61 8.49023 10.5C8.49023 9.39001 9.39001 8.49023 10.5 8.49023C11.61 8.49023 12.5098 9.39001 12.5098 10.5Z" fill="white"/>
+                            <path d="M15.2002 6.94413C15.1036 6.68233 14.9494 6.44537 14.7492 6.25087C14.5546 6.0506 14.3178 5.89647 14.0559 5.79986C13.8434 5.71735 13.5243 5.61913 12.9365 5.59238C12.3006 5.56338 12.1099 5.55713 10.5 5.55713C8.89001 5.55713 8.69935 5.56322 8.06361 5.59222C7.47577 5.61913 7.15646 5.71735 6.94417 5.79986C6.68221 5.89647 6.44525 6.0506 6.25091 6.25087C6.05064 6.44537 5.89651 6.68217 5.79974 6.94413C5.71722 7.15658 5.61901 7.47589 5.59225 8.06373C5.56326 8.69947 5.55701 8.89013 5.55701 10.5002C5.55701 12.11 5.56326 12.3007 5.59225 12.9366C5.61901 13.5244 5.71722 13.8436 5.79974 14.056C5.89651 14.318 6.05048 14.5548 6.25075 14.7493C6.44525 14.9495 6.68205 15.1037 6.94401 15.2003C7.15646 15.283 7.47577 15.3812 8.06361 15.4079C8.69935 15.4369 8.88985 15.443 10.4999 15.443C12.1101 15.443 12.3007 15.4369 12.9363 15.4079C13.5241 15.3812 13.8434 15.283 14.0559 15.2003C14.5817 14.9975 14.9973 14.5818 15.2002 14.056C15.2827 13.8436 15.3809 13.5244 15.4078 12.9366C15.4368 12.3007 15.4429 12.11 15.4429 10.5002C15.4429 8.89013 15.4368 8.69947 15.4078 8.06373C15.3811 7.47589 15.2828 7.15658 15.2002 6.94413V6.94413ZM10.5 13.596C8.79003 13.596 7.40383 12.21 7.40383 10.5C7.40383 8.78999 8.79003 7.40395 10.5 7.40395C12.2099 7.40395 13.5961 8.78999 13.5961 10.5C13.5961 12.21 12.2099 13.596 10.5 13.596ZM13.7185 8.00509C13.3189 8.00509 12.9949 7.68113 12.9949 7.28155C12.9949 6.88197 13.3189 6.55801 13.7185 6.55801C14.1181 6.55801 14.442 6.88197 14.442 7.28155C14.4419 7.68113 14.1181 8.00509 13.7185 8.00509Z" fill="white"/>
+                            <path d="M10.5 0C4.7019 0 0 4.7019 0 10.5C0 16.2981 4.7019 21 10.5 21C16.2981 21 21 16.2981 21 10.5C21 4.7019 16.2981 0 10.5 0ZM16.4929 12.9858C16.4638 13.6276 16.3617 14.0658 16.2127 14.4494C15.8995 15.2593 15.2593 15.8995 14.4494 16.2127C14.066 16.3617 13.6276 16.4636 12.9859 16.4929C12.343 16.5222 12.1376 16.5293 10.5002 16.5293C8.86258 16.5293 8.65734 16.5222 8.01423 16.4929C7.37256 16.4636 6.9342 16.3617 6.5508 16.2127C6.14834 16.0613 5.784 15.824 5.4828 15.5172C5.17614 15.2162 4.93886 14.8517 4.78745 14.4494C4.63845 14.066 4.53639 13.6276 4.50723 12.9859C4.47759 12.3428 4.4707 12.1374 4.4707 10.5C4.4707 8.86258 4.47759 8.65718 4.50707 8.01423C4.53623 7.3724 4.63813 6.9342 4.78713 6.55064C4.93854 6.14834 5.17598 5.78384 5.4828 5.4828C5.78384 5.17598 6.14834 4.9387 6.55064 4.78729C6.9342 4.63829 7.3724 4.53639 8.01423 4.50707C8.65718 4.47775 8.86258 4.4707 10.5 4.4707C12.1374 4.4707 12.3428 4.47775 12.9858 4.50723C13.6276 4.53639 14.0658 4.63829 14.4494 4.78713C14.8517 4.93854 15.2162 5.17598 15.5174 5.4828C15.824 5.784 16.0615 6.14834 16.2127 6.55064C16.3619 6.9342 16.4638 7.3724 16.4931 8.01423C16.5224 8.65718 16.5293 8.86258 16.5293 10.5C16.5293 12.1374 16.5224 12.3428 16.4929 12.9858V12.9858Z" fill="white"/>
+                        </svg>
                     </a>
-                    <a href="">
-                        <img src="img/icons/youtube.svg" alt="youtube">
+                    <a href="#">
+                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.19214 12.4673L12.6077 10.5001L9.19214 8.53296V12.4673Z" fill="white"/>
+                            <path d="M10.5 0C4.7019 0 0 4.7019 0 10.5C0 16.2981 4.7019 21 10.5 21C16.2981 21 21 16.2981 21 10.5C21 4.7019 16.2981 0 10.5 0ZM17.0609 10.5107C17.0609 10.5107 17.0609 12.6402 16.7908 13.667C16.6394 14.2291 16.1962 14.6722 15.6342 14.8235C14.6073 15.0938 10.5 15.0938 10.5 15.0938C10.5 15.0938 6.4034 15.0937 5.36584 14.8127C4.80379 14.6615 4.36063 14.2182 4.20923 13.6561C3.93894 12.6402 3.93894 10.5 3.93894 10.5C3.93894 10.5 3.93894 8.37071 4.20923 7.34388C4.36047 6.78184 4.81453 6.32778 5.36584 6.17654C6.39267 5.90625 10.5 5.90625 10.5 5.90625C10.5 5.90625 14.6073 5.90625 15.6342 6.18727C16.1962 6.33852 16.6394 6.78184 16.7908 7.34388C17.0718 8.37071 17.0609 10.5107 17.0609 10.5107V10.5107Z" fill="white"/>
+                        </svg>
                     </a>
                 </div>
                 <div class="copyrights">
@@ -456,6 +708,8 @@
                 <a class="footer_column_item" href="#">Контакты</a>
 
                 <div class="site_creative">
+                    <a href="#" class="m_content">2020 Аквапарк На Волне</a>
+                    <a href="#" class="m_content">Политика конфиденциальности</a>
                     <a href="#">Разработка сайта - Site-Creative</a>
                 </div>
             </div>
