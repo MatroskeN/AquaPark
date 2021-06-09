@@ -37,15 +37,19 @@ header .header_wrapper .buy_btn {
   line-height: 24px;
   /* identical to box height */
   color: #FFFFFF;
-  background: -o-linear-gradient(354.85deg, #F1DD38 -17.73%, #DE5307 125.96%);
-  background: linear-gradient(95.15deg, #F1DD38 -17.73%, #DE5307 125.96%);
+  background: -webkit-gradient(linear, right top, left top, color-stop(-17.73%, #F1DD38), color-stop(125.96%, #DE5307));
+  background: -o-linear-gradient(right, #F1DD38 -17.73%, #DE5307 125.96%);
+  background: linear-gradient(to left, #F1DD38 -17.73%, #DE5307 125.96%);
+  background-size: 200%;
   border-radius: 58px;
   border: none;
   padding: 8px 17px 8px 17px;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
 }
 header .header_wrapper .buy_btn:hover {
-  background: -o-linear-gradient(172.32deg, #F1DD38 -22.05%, #DE5307 120.35%);
-  background: linear-gradient(277.68deg, #F1DD38 -22.05%, #DE5307 120.35%);
+  background-position: right;
 }
 header .header_wrapper .menu_items {
   display: -webkit-box;
@@ -635,6 +639,22 @@ main .amusement .amusement_slider .kid_container .vawe_bottom {
   left: -40px;
   z-index: 2;
 }
+main .amusement .amusement_slider .kid_container .navigation_block {
+  position: absolute;
+  bottom: 12px;
+  right: 39px;
+  z-index: 5;
+}
+main .amusement .amusement_slider .kid_container .navigation_block .swiper-button-disabled {
+  fill: none;
+}
+main .amusement .amusement_slider .kid_container .navigation_block .swiper-button-disabled path {
+  stroke: white;
+}
+main .amusement .amusement_slider .kid_container .navigation_block .next_arrow {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
 main .amusement .amusement_slider .kid_container .swiper-slide .slider {
   position: relative;
   display: -webkit-box;
@@ -726,6 +746,9 @@ main .tariffs .table-block table tr th {
 }
 main .tariffs .table-block table tr th:nth-child(4n+4) {
   border-right: 1px solid #0089B6;
+}
+main .tariffs .table-block table tr th:last-child {
+  border-right: 1px solid transparent;
 }
 main .tariffs .table-block table tr .deep_blue {
   border-bottom: 1px solid transparent;
@@ -860,8 +883,10 @@ main .ananas .ananas_wrapper .ananas_content .ananas_btn {
   max-width: 141px;
   margin-left: auto;
   border: none;
-  background: -o-linear-gradient(354.85deg, #F1DD38 -17.73%, #DE5307 125.96%);
-  background: linear-gradient(95.15deg, #F1DD38 -17.73%, #DE5307 125.96%);
+  background: -webkit-gradient(linear, right top, left top, color-stop(-17.73%, #F1DD38), color-stop(125.96%, #DE5307));
+  background: -o-linear-gradient(right, #F1DD38 -17.73%, #DE5307 125.96%);
+  background: linear-gradient(to left, #F1DD38 -17.73%, #DE5307 125.96%);
+  background-size: 200%;
   border-radius: 58px;
   padding: 7px 23px 10px 24px;
   font-family: 'Rounded Mplus 1c';
@@ -871,10 +896,12 @@ main .ananas .ananas_wrapper .ananas_content .ananas_btn {
   line-height: 24px;
   /* identical to box height */
   color: #FFFFFF;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
 }
 main .ananas .ananas_wrapper .ananas_content .ananas_btn:hover {
-  background: -o-linear-gradient(172.32deg, #F1DD38 -22.05%, #DE5307 120.35%);
-  background: linear-gradient(277.68deg, #F1DD38 -22.05%, #DE5307 120.35%);
+  background-position: right;
 }
 main .ananas .ananas_wrapper .feather {
   position: absolute;
@@ -885,6 +912,15 @@ main .ananas .ananas_wrapper .left_feather {
 }
 main .ananas .ananas_wrapper .right_feather {
   right: -100px;
+}
+main .ananas .ananas_wrapper .ananas_vawe {
+  position: absolute;
+  bottom: 0;
+  left: 105px;
+}
+main .ananas .ananas_wrapper .another_vawe {
+  left: 340px;
+  bottom: 115px;
 }
 main .map_block {
   position: relative;
@@ -948,8 +984,10 @@ main .map_block .contact_info .how_btn {
   width: -moz-fit-content;
   width: fit-content;
   border: none;
-  background: -o-linear-gradient(354.85deg, #F1DD38 -17.73%, #DE5307 125.96%);
-  background: linear-gradient(95.15deg, #F1DD38 -17.73%, #DE5307 125.96%);
+  background: -webkit-gradient(linear, right top, left top, color-stop(-17.73%, #F1DD38), color-stop(125.96%, #DE5307));
+  background: -o-linear-gradient(right, #F1DD38 -17.73%, #DE5307 125.96%);
+  background: linear-gradient(to left, #F1DD38 -17.73%, #DE5307 125.96%);
+  background-size: 200%;
   border-radius: 58px;
   font-family: 'Rounded Mplus 1c';
   font-style: normal;
@@ -964,8 +1002,7 @@ main .map_block .contact_info .how_btn {
   transition: all 0.4s;
 }
 main .map_block .contact_info .how_btn:hover {
-  background: -o-linear-gradient(172.32deg, #F1DD38 -22.05%, #DE5307 120.35%);
-  background: linear-gradient(277.68deg, #F1DD38 -22.05%, #DE5307 120.35%);
+  background-position: right;
 }
 main .map_block .map {
   position: absolute;
@@ -1220,15 +1257,30 @@ footer .footer_backvawe {
   -webkit-animation: scroll linear 30s infinite;
           animation: scroll linear 30s infinite;
 }
-@keyframes scroll {
-  from {
-    background-position: 0 0;
+@-webkit-keyframes move-forever {
+  0% {
+    -webkit-transform: translate3d(-90px, 0, 0);
+            transform: translate3d(-90px, 0, 0);
   }
-  to {
-    background-position: 1000% 0;
+  100% {
+    -webkit-transform: translate3d(85px, 0, 0);
+            transform: translate3d(85px, 0, 0);
+  }
+}
+@keyframes move-forever {
+  0% {
+    -webkit-transform: translate3d(-90px, 0, 0);
+            transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(85px, 0, 0);
+            transform: translate3d(85px, 0, 0);
   }
 }
 @media (max-width: 1025px) {
+  .ananas_vawe {
+    display: none;
+  }
   header .header_wrapper {
     max-width: 600px;
     -webkit-box-pack: space-evenly;
@@ -1657,6 +1709,9 @@ footer .footer_backvawe {
   header .header_wrapper .logo a img {
     width: 120px;
     height: 55px;
+  }
+  main .banner {
+    height: 373px !important;
   }
   main .services {
     max-width: 320px;

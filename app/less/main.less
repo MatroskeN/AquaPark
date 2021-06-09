@@ -29,13 +29,15 @@ header{
 
 
             color: #FFFFFF;
-            background : linear-gradient(95.15deg, #F1DD38 -17.73%, #DE5307 125.96%);
+            background : linear-gradient(to left, #F1DD38 -17.73%, #DE5307 125.96%);
+            background-size: 200%;
             border-radius: 58px;
             border: none;
             padding: 8px 17px 8px 17px;
-
+            transition: all 0.4s;
             &:hover{
-                background: linear-gradient(277.68deg, #F1DD38 -22.05%, #DE5307 120.35%);
+                background-position: right;
+                // background: linear-gradient(277.68deg, #F1DD38 -22.05%, #DE5307 120.35%);
             }
         }
         .menu_items{
@@ -539,6 +541,21 @@ main{
                     left: -40px;
                     z-index: 2;
                 }
+                .navigation_block{
+                    position: absolute;
+                    bottom: 12px;
+                    right: 39px;
+                    z-index: 5;
+                    .swiper-button-disabled{
+                        fill:none;
+                        path{
+                            stroke:white;
+                        }
+                    }
+                    .next_arrow{
+                        transform: rotateY(180deg);
+                    }
+                }
                .swiper-slide{
                    
                     .slider{
@@ -628,6 +645,9 @@ main{
                         border-bottom: 1px solid #0089B6;
                         &:nth-child(4n+4){
                             border-right: 1px solid #0089B6;
+                        }
+                        &:last-child{
+                            border-right: 1px solid transparent;
                         }
                     }
                     .deep_blue{
@@ -757,8 +777,8 @@ main{
                     max-width: 141px;
                     margin-left: auto;
                     border: none;
-                    background: linear-gradient(95.15deg, #F1DD38 -17.73%, #DE5307 125.96%);
-                    border-radius: 58px;
+                    background : linear-gradient(to left, #F1DD38 -17.73%, #DE5307 125.96%);
+                    background-size: 200%;                    border-radius: 58px;
                     padding: 7px 23px 10px 24px;
                     font-family: 'Rounded Mplus 1c';
                     font-style: normal;
@@ -769,9 +789,9 @@ main{
 
 
                     color: #FFFFFF;
-
+                    transition: all 0.4s;
                     &:hover{
-                        background: linear-gradient(277.68deg, #F1DD38 -22.05%, #DE5307 120.35%);
+                        background-position: right;                    
                     }
                 }
             }
@@ -784,6 +804,15 @@ main{
             }
             .right_feather{
                 right: -100px;
+            }
+            .ananas_vawe{
+                position: absolute;
+                bottom: 0;
+                left: 105px;
+            }
+            .another_vawe{
+                left: 340px;
+                bottom: 115px;
             }
         }
     }
@@ -824,7 +853,8 @@ main{
                 display: flex;
                 width: fit-content;
                 border: none;
-                background: linear-gradient(95.15deg, #F1DD38 -17.73%, #DE5307 125.96%);
+                background : linear-gradient(to left, #F1DD38 -17.73%, #DE5307 125.96%);
+                background-size: 200%;
                 border-radius: 58px;
                 font-family: 'Rounded Mplus 1c';
                 font-style: normal;
@@ -839,7 +869,7 @@ main{
                 transition: all 0.4s;
 
                 &:hover{
-                    background: linear-gradient(277.68deg, #F1DD38 -22.05%, #DE5307 120.35%);
+                    background-position: right;
                 }
             }
         }
@@ -1088,16 +1118,25 @@ footer{
         transition: all 0.4s;
         animation: scroll linear 30s infinite;
     }
-    @keyframes scroll {
-        from {
-          background-position: 0 0;
-        }
-        to {
-          background-position: 1000% 0;
-        }
+    @keyframes move-forever {
+        // from {
+        //   background-position: 0 0;
+        // }
+        // to {
+        //   background-position: 1000% 0;
+        // }
+        0% {
+            transform: translate3d(-90px,0,0);
+           }
+           100% { 
+             transform: translate3d(85px,0,0);
+           }
     }
 }
 @media(max-width:1025px){
+    .ananas_vawe{
+        display: none;
+    }
     header{
         .header_wrapper{
             max-width: 600px;
@@ -1510,6 +1549,9 @@ footer{
         }
     }
     main{
+        .banner{
+            height: 373px !important;
+        }
         .services{
             max-width: 320px;
             .services_slider{
