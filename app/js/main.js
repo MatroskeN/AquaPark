@@ -2,7 +2,7 @@ $(document).ready(function (){
 
     var swiper = new Swiper('.services_container', {
         slidesPerView: 'auto',
-        spaceBetween: 29,
+        spaceBetween: 35,
         navigation: {
             nextEl: '.services_next',
             prevEl: '.services_prev',
@@ -10,7 +10,9 @@ $(document).ready(function (){
           pagination: {
             el: '.swiper-pagination',
             type: 'bullets',
+            clickable: true,
           },
+          loop: true,
       });
       var swiper1 = new Swiper('.kid_container', {
         slidesPerView: 1,
@@ -27,13 +29,21 @@ $(document).ready(function (){
         $('.xclose').css({'display':'block'});
         $('.header_popup').css({'display':'flex'});
         $('.m_sced').css({'display':'none'});
+        $('.black_block').css({'display':'block'});
+        $('.swiper-pagination').css({'display':'none'});
+        document.getElementById('body').style.overflow="hidden";
       })
+
       $(".xclose").on("click", function () {
         $(this).css({'display':'none'});
         $('.menu_normal').css({'display':'block'});
         $('.header_popup').css({'display':'none'});
         $('.m_sced').css({'display':'block'});
+        $('.black_block').css({'display':'none'});
+        $('.swiper-pagination').css({'display':'block'});
+        document.getElementById('body').style.overflow="auto";
       })
+
       $(".service_slider").on("click", function (){
         $(".service_slider").removeClass("active_slider");
         $(this).addClass("active_slider");
