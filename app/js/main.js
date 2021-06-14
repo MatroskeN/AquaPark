@@ -2,7 +2,6 @@ $(document).ready(function (){
 
     var swiper = new Swiper('.services_container', {
         slidesPerView: 'auto',
-        spaceBetween: 35,
         navigation: {
             nextEl: '.services_next',
             prevEl: '.services_prev',

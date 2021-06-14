@@ -534,8 +534,10 @@ main{
                     }
                 }
             }
-            .swiper-pagination{
-                display:none;
+            @media(min-width:768px){
+                .swiper-pagination{
+                    display:none !important;
+                }
             }
             .services_container{
                 max-width: 1200px;
@@ -550,6 +552,7 @@ main{
                     align-items: center;
                     transition: all 0.4s;
                     cursor: pointer;
+                    margin-right:35px;
                     img{
                         height:50px;
                         margin-top: 20px;
@@ -566,6 +569,9 @@ main{
 
                         color: #FFFFFF;
                         margin-top: 10px;
+                    }
+                    &:hover{
+                        background: linear-gradient(113.69deg, #F7971E -30.9%, #F1DD38 129.51%);
                     }
                 }
                 .active_slider{
@@ -1752,8 +1758,8 @@ footer{
     }
     .sced_item{
         position:relative;
-        pointer-events:none;
         .popup_scedh{
+            pointer-events:none;
             top: 25px;
             left: -115px;
             position:absolute;

@@ -639,8 +639,10 @@ main .services .services_slider .services_navigation .services_prev:hover {
       -ms-transform: scaleY(1.3);
           transform: scaleY(1.3);
 }
-main .services .services_slider .swiper-pagination {
-  display: none;
+@media (min-width: 768px) {
+  main .services .services_slider .swiper-pagination {
+    display: none !important;
+  }
 }
 main .services .services_slider .services_container {
   max-width: 1200px;
@@ -672,6 +674,7 @@ main .services .services_slider .services_container .slider {
   -o-transition: all 0.4s;
   transition: all 0.4s;
   cursor: pointer;
+  margin-right: 35px;
 }
 main .services .services_slider .services_container .slider img {
   height: 50px;
@@ -688,6 +691,10 @@ main .services .services_slider .services_container .slider p {
   text-align: center;
   color: #FFFFFF;
   margin-top: 10px;
+}
+main .services .services_slider .services_container .slider:hover {
+  background: -o-linear-gradient(336.31deg, #F7971E -30.9%, #F1DD38 129.51%);
+  background: linear-gradient(113.69deg, #F7971E -30.9%, #F1DD38 129.51%);
 }
 main .services .services_slider .services_container .active_slider {
   background: -o-linear-gradient(336.31deg, #F7971E -30.9%, #F1DD38 129.51%);
@@ -1951,9 +1958,9 @@ footer .footer_backvawe {
   }
   .sced_item {
     position: relative;
-    pointer-events: none;
   }
   .sced_item .popup_scedh {
+    pointer-events: none;
     top: 25px;
     left: -115px;
     position: absolute;
