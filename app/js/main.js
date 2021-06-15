@@ -2,6 +2,7 @@ $(document).ready(function (){
 
     var swiper = new Swiper('.services_container', {
         slidesPerView: 'auto',
+        spaceBetween: 29,
         navigation: {
             nextEl: '.services_next',
             prevEl: '.services_prev',
@@ -12,6 +13,11 @@ $(document).ready(function (){
             clickable: true,
           },
           loop: true,
+          breakpoint: {
+            425: {
+              spaceBetween: 33,
+            }
+          }
       });
       var swiper1 = new Swiper('.kid_container', {
         slidesPerView: 1,
@@ -49,6 +55,7 @@ $(document).ready(function (){
         $(".service_slider").removeClass("active_slider");
         $(this).addClass("active_slider");
       })
+      
 
       //burger menu items
       let counter = 1;
