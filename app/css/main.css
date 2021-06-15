@@ -222,7 +222,6 @@ header .header_popup {
   max-width: 1200px;
   border-top: 1px solid #0089B6;
   margin: 0 auto;
-  margin-top: 30px;
   height: 571px;
   padding-top: 44px;
   display: none;
@@ -328,8 +327,14 @@ main .banner .top_vawe {
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   transition: all 0.4s;
-  -webkit-animation: mover1 5s ease-in-out forwards infinite;
-  animation: mover1 5s ease-in-out forwards infinite;
+}
+@media (max-width: 768px) {
+  main .banner .top_vawe {
+    top: -29px;
+  }
+  main .banner .bottom_vawe {
+    bottom: -126px !important;
+  }
 }
 main .banner .bottom_vawe {
   position: absolute;
@@ -342,8 +347,6 @@ main .banner .bottom_vawe {
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   transition: all 0.4s;
-  -webkit-animation: mover 5s ease-in-out forwards infinite;
-  animation: mover 5s ease-in-out forwards infinite;
 }
 @-webkit-keyframes scroll {
   from {
@@ -849,12 +852,23 @@ main .amusement .amusement_slider .kid_container .navigation_block {
   right: 39px;
   z-index: 5;
 }
-main .amusement .amusement_slider .kid_container .navigation_block .swiper-button-disabled {
+main .amusement .amusement_slider .kid_container .navigation_block .kid_arrow {
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
   fill: none;
-  cursor: default !important;
 }
-main .amusement .amusement_slider .kid_container .navigation_block .swiper-button-disabled path {
+main .amusement .amusement_slider .kid_container .navigation_block .kid_arrow path {
   stroke: white;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+main .amusement .amusement_slider .kid_container .navigation_block .kid_arrow:hover {
+  fill: #fff;
+}
+main .amusement .amusement_slider .kid_container .navigation_block .kid_arrow:hover path {
+  stroke: #DE5307;
 }
 main .amusement .amusement_slider .kid_container .navigation_block .next_arrow {
   -webkit-transform: rotateY(180deg);
@@ -1469,8 +1483,6 @@ footer .footer_backvawe {
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   transition: all 0.4s;
-  -webkit-animation: mover 5s ease-in-out forwards infinite;
-  animation: mover 5s ease-in-out forwards infinite;
 }
 @-webkit-keyframes move-forever {
   0% {
@@ -1656,7 +1668,6 @@ footer .footer_backvawe {
     color: #DE5307;
   }
   header .header_popup .mob .mob_menu .openable_menu .openable_menu_items .closed {
-    display: none;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
@@ -1676,6 +1687,9 @@ footer .footer_backvawe {
   }
   header .header_popup .mob .mob_menu .openable_menu .openable_menu_items .closed a:last-child {
     margin-bottom: 15px;
+  }
+  header .header_popup .mob .mob_menu .openable_menu .non_open .closed {
+    display: none;
   }
   header .header_popup .mob .mob_menu .openable_menu .opened .closed {
     display: -webkit-box;
@@ -1703,7 +1717,7 @@ footer .footer_backvawe {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-top: 38px;
+    margin-top: 17px;
   }
   header .header_popup .mob .mob_menu .mob_phone a {
     font-family: 'Rounded Mplus 1c';
@@ -2129,9 +2143,13 @@ footer .footer_backvawe {
     width: 320px;
   }
   main .amusement .amusement_slider .kid_container .swiper-slide .slider {
-    width: 290px !important;
+    width: 287px !important;
     height: 197px;
     margin-left: 20px;
+  }
+  main .amusement .amusement_slider .kid_container .swiper-slide .slider img {
+    width: 287px;
+    height: 197px;
   }
   main .amusement .amusement_slider .kid_container .vawe,
   main .amusement .amusement_slider .kid_container .vawe_bottom {
@@ -2144,6 +2162,11 @@ footer .footer_backvawe {
   main .amusement .amusement_slider .kid_container .vawe_bottom {
     left: 0;
     bottom: 0;
+  }
+  main .amusement .amusement_text .amusement_title {
+    font-size: 20px;
+    line-height: 107%;
+    margin-bottom: 15px;
   }
   main .amusement .amusement_text .amusement_description .btn_block .more_btn .back_circle {
     width: 115px;
@@ -2232,14 +2255,23 @@ footer .footer_backvawe {
     background: -o-linear-gradient(left, #36D1DC -239.12%, #5B87E5 361.82%);
     background: linear-gradient(90deg, #36D1DC -239.12%, #5B87E5 361.82%);
   }
+  footer .footer_vawe {
+    top: -51px;
+  }
+  footer .footer_backvawe {
+    top: -47px;
+  }
   .footer_wrapper {
     padding-bottom: 30px;
+  }
+  .footer_wrapper .first_column {
+    margin-top: unset !important;
   }
   .footer_wrapper .footer_column {
     margin-top: 27px;
   }
   .footer_wrapper .footer_column .sub_logo {
-    margin-bottom: unset;
+    margin-bottom: unset !important;
   }
   .footer_wrapper .footer_column .site_creative {
     display: -webkit-box;

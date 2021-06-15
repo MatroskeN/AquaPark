@@ -193,7 +193,6 @@ header{
         max-width: 1200px;
         border-top: 1px solid #0089B6;
         margin: 0 auto;
-        margin-top: 30px;
         height: 571px;
         padding-top: 44px;
         img{
@@ -283,10 +282,18 @@ main{
             width: 100%;
             height: 168px;
             transition: all 0.4s;
-            -webkit-animation: mover1 5s ease-in-out forwards infinite;
-            -moz-animation: mover1 5s ease-in-out forwards infinite;
-            -o-animation: mover1 5s ease-in-out forwards infinite;
-            animation: mover1 5s ease-in-out forwards infinite;
+            // -webkit-animation: mover1 5s ease-in-out forwards infinite;
+            // -moz-animation: mover1 5s ease-in-out forwards infinite;
+            // -o-animation: mover1 5s ease-in-out forwards infinite;
+            // animation: mover1 5s ease-in-out forwards infinite;
+        }
+        @media(max-width:768px){
+            .top_vawe{
+                top: -29px;
+            }
+            .bottom_vawe{
+                bottom: -126px !important;
+            }
         }
         .bottom_vawe{
             position: absolute;
@@ -297,10 +304,10 @@ main{
             width: 100%;
             height: 281px;
             transition: all 0.4s;
-            -webkit-animation: mover 5s ease-in-out forwards infinite;
-            -moz-animation: mover 5s ease-in-out forwards infinite;
-            -o-animation: mover 5s ease-in-out forwards infinite;
-            animation: mover 5s ease-in-out forwards infinite;
+            // -webkit-animation: mover 5s ease-in-out forwards infinite;
+            // -moz-animation: mover 5s ease-in-out forwards infinite;
+            // -o-animation: mover 5s ease-in-out forwards infinite;
+            // animation: mover 5s ease-in-out forwards infinite;
         }
         @keyframes scroll {
             from {
@@ -718,11 +725,19 @@ main{
                     bottom: 12px;
                     right: 39px;
                     z-index: 5;
-                    .swiper-button-disabled{
+                    .kid_arrow{
+                        transition: all 0.4s;
                         fill:none;
-                        cursor:default !important;
                         path{
                             stroke:white;
+                            transition: all 0.4s;
+                        }
+
+                        &:hover{
+                            fill: #fff;
+                            path{
+                                stroke:#DE5307;
+                            }
                         }
                     }
                     .next_arrow{
@@ -1298,10 +1313,10 @@ footer{
         width: 100%;
         height: 236px;
         transition: all 0.4s;
-        -webkit-animation: mover 5s ease-in-out forwards infinite;
-            -moz-animation: mover 5s ease-in-out forwards infinite;
-            -o-animation: mover 5s ease-in-out forwards infinite;
-            animation: mover 5s ease-in-out forwards infinite;
+        // -webkit-animation: mover 5s ease-in-out forwards infinite;
+        //     -moz-animation: mover 5s ease-in-out forwards infinite;
+        //     -o-animation: mover 5s ease-in-out forwards infinite;
+        //     animation: mover 5s ease-in-out forwards infinite;
     }
     @keyframes move-forever {
         // from {
@@ -1439,7 +1454,6 @@ footer{
                                 }
                             }
                             .closed{
-                                display: none;
                                 flex-direction: column;
                                 a{
                                     font-family: 'Rounded Mplus 1c';
@@ -1459,6 +1473,11 @@ footer{
                                 }
                             }
                         }
+                        .non_open{
+                            .closed{
+                                display: none;
+                            }
+                        }
                         .opened{
                             .closed{
                                 display: flex;
@@ -1475,7 +1494,7 @@ footer{
                         display:flex;
                         align-items:center;
                         justify-content:center;
-                        margin-top:38px;
+                        margin-top:17px;
                         a{
                             font-family: 'Rounded Mplus 1c';
                             font-style: normal;
@@ -1922,9 +1941,13 @@ footer{
                     width: 320px;
                     .swiper-slide{
                         .slider{
-                            width: 290px !important;
+                            width: 287px !important;
                             height: 197px;
                             margin-left: 20px;
+                            img{
+                                width: 287px;
+                                height: 197px;
+                            }
                         }
                     }
                     .vawe,.vawe_bottom{
@@ -1941,6 +1964,11 @@ footer{
                 }
             }
             .amusement_text{
+                .amusement_title{
+                    font-size: 20px;
+                    line-height: 107%;
+                    margin-bottom: 15px;
+                }
                 .amusement_description{
                     .btn_block{
                         .more_btn{
@@ -2031,13 +2059,24 @@ footer{
     }
     footer{
         background: linear-gradient(90deg, #36D1DC -239.12%, #5B87E5 361.82%);
+
+        .footer_vawe{
+            top: -51px;
+        }
+
+        .footer_backvawe{
+            top: -47px;
+        }
     }
     .footer_wrapper{
         padding-bottom: 30px;
+        .first_column{
+            margin-top: unset !important;
+        }
         .footer_column{
             margin-top:27px;
             .sub_logo{
-                margin-bottom:unset;
+                margin-bottom:unset !important;
             }
             .site_creative{
                 display: flex;

@@ -40,6 +40,8 @@ $(document).ready(function (){
         $('.m_sced').css({'display':'block'});
         $('.black_block').css({'display':'none'});
         $('.swiper-pagination').css({'display':'block'});
+        $(".opened").addClass("non_open");
+        $(".opened").removeClass("opened");
         document.getElementById('body').style.overflow="auto";
       })
 
@@ -48,10 +50,19 @@ $(document).ready(function (){
         $(this).addClass("active_slider");
       })
 
-
-      $(".openable_menu_items").on("click", function (){
-        $(".openable_menu_items").removeClass("opened");
-        $(this).addClass("opened");
+      //burger menu items
+      let counter = 1;
+      $(".non_open").on("click", function (){
+        if (counter == 1){
+          $(".non_open").removeClass("opened");
+          $(this).addClass("opened");
+          $(this).removeClass("non_open");
+          counter*=-1;
+        } else {
+          $(this).removeClass("opened");
+          $(this).addClass("non_open");
+          counter*=-1;
+        }
       })
 
     
@@ -68,5 +79,39 @@ $(document).ready(function (){
     
         return false;
     });
+
+    /**
+    * Animate:Breeze
+    */
+      let line = document.querySelectorAll('.top_vawe');
+      let size = 0;
+      setInterval(function(){
+      UpdateLine();
+      }, 30);
+      function UpdateLine(){
+      size = size - 2;
+      line.forEach(element => {
+      element.style.backgroundPosition = size + 'px 0px';
+      });
+      size = size - 2;
+      }
 })
+
+$( document ).ready(function() {
+  /**
+    * Animate:Breeze
+    */
+   let line = document.querySelectorAll('.breeze');
+   let size = 0;
+   setInterval(function(){
+   UpdateLine();
+   }, 30);
+   function UpdateLine(){
+   size = size + 2;
+   line.forEach(element => {
+   element.style.backgroundPosition = size + 'px 0px';
+   });
+   size = size + 2;
+   }
+});
 
