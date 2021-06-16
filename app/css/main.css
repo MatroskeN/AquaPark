@@ -301,8 +301,10 @@ header .header_popup .bold_column a {
   }
   header .header_popup {
     max-width: 100%;
-    height: 100vh !important;
+    height: 100% !important;
     background: #fff;
+    min-height: 100vh;
+    padding-bottom: 20px;
   }
   header .header_popup .mob {
     max-width: 320px;
@@ -708,9 +710,11 @@ main .services .services_slider .services_container .slider p {
   color: #FFFFFF;
   margin-top: 10px;
 }
-main .services .services_slider .services_container .slider:hover {
-  background: -o-linear-gradient(336.31deg, #F7971E -30.9%, #F1DD38 129.51%);
-  background: linear-gradient(113.69deg, #F7971E -30.9%, #F1DD38 129.51%);
+@media (min-width: 600px) {
+  main .services .services_slider .services_container .slider:hover {
+    background: -o-linear-gradient(336.31deg, #F7971E -30.9%, #F1DD38 129.51%);
+    background: linear-gradient(113.69deg, #F7971E -30.9%, #F1DD38 129.51%);
+  }
 }
 main .services .services_slider .services_container .active_slider {
   background: -o-linear-gradient(336.31deg, #F7971E -30.9%, #F1DD38 129.51%);
@@ -1534,7 +1538,7 @@ footer .footer_backvawe {
     display: none !important;
   }
   header .header_popup {
-    max-width: 320px;
+    max-width: 100%;
     padding-top: 15px;
   }
   header .header_popup .desc {
@@ -2128,10 +2132,8 @@ footer .footer_backvawe {
   main .services .services_slider .services_container .slider p {
     font-size: 14px;
     line-height: 14px;
-  }
-  main .services .services_slider .services_container .slider:hover {
-    background: -o-linear-gradient(336.31deg, #36D1DC -30.9%, #5B87E5 129.51%);
-    background: linear-gradient(113.69deg, #36D1DC -30.9%, #5B87E5 129.51%);
+    padding-left: 5px;
+    padding-right: 5px;
   }
   main .services .services_slider .swiper-pagination {
     display: block;

@@ -1,8 +1,15 @@
 $(document).ready(function (){
 
     var swiper = new Swiper('.services_container', {
-        slidesPerView: 'auto',
-        spaceBetween: 29,
+        slidesPerView: '2',
+        spaceBetween: 20,
+        loop:true,
+        breakpoints: {
+          426: {
+            spaceBetween: 29,
+            slidesPerView: '6',
+          },
+        },
         navigation: {
             nextEl: '.services_next',
             prevEl: '.services_prev',
@@ -12,12 +19,7 @@ $(document).ready(function (){
             type: 'bullets',
             clickable: true,
           },
-          loop: true,
-          breakpoint: {
-            425: {
-              spaceBetween: 33,
-            }
-          }
+          
       });
       var swiper1 = new Swiper('.kid_container', {
         slidesPerView: 1,
@@ -36,7 +38,14 @@ $(document).ready(function (){
         $('.m_sced').css({'display':'none'});
         $('.black_block').css({'display':'block'});
         $('.swiper-pagination').css({'display':'none'});
-        document.getElementById('body').style.overflow="hidden";
+        $('#header').css({'position':'absolute'});
+        $('html, body').animate({
+          scrollTop: $('#header').offset().top
+          }, {
+              duration: 370,   // по умолчанию «400» 
+              easing: "linear" // по умолчанию «swing» 
+          });
+        //document.getElementById('body').style.overflow="hidden";
       })
 
       $(".xclose").on("click", function () {
@@ -48,7 +57,8 @@ $(document).ready(function (){
         $('.swiper-pagination').css({'display':'block'});
         $(".opened").addClass("non_open");
         $(".opened").removeClass("opened");
-        document.getElementById('body').style.overflow="auto";
+        $('#header').css({'position':'fixed'});
+        //document.getElementById('body').style.overflow="auto";
       })
 
       $(".service_slider").on("click", function (){
