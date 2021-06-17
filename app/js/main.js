@@ -38,7 +38,7 @@ $(document).ready(function (){
         $('.m_sced').css({'display':'none'});
         $('.black_block').css({'display':'block'});
         $('.swiper-pagination').css({'display':'none'});
-        $('#header').css({'position':'absolute'});
+        $('#head').css({'position':'absolute'});
         $('html, body').animate({
           scrollTop: $('#header').offset().top
           }, {
@@ -57,10 +57,20 @@ $(document).ready(function (){
         $('.swiper-pagination').css({'display':'block'});
         $(".opened").addClass("non_open");
         $(".opened").removeClass("opened");
-        $('#header').css({'position':'fixed'});
+        $('#head').css({'position':'fixed'});
         //document.getElementById('body').style.overflow="auto";
       })
-
+      $(".black_block").on("click", function (){
+        $(".xclose").css({'display':'none'});
+        $('.menu_normal').css({'display':'block'});
+        $('.header_popup').css({'display':'none'});
+        $('.m_sced').css({'display':'block'});
+        $('.black_block').css({'display':'none'});
+        $('.swiper-pagination').css({'display':'block'});
+        $(".opened").addClass("non_open");
+        $(".opened").removeClass("opened");
+        $('#head').css({'position':'fixed'});
+      })
       $(".service_slider").on("click", function (){
         $(".service_slider").removeClass("active_slider");
         $(this).addClass("active_slider");
@@ -84,8 +94,6 @@ $(document).ready(function (){
 
     
       $('.anchor a').on('click', function() {
-
-        let href = $(this).attr('href');
     
         $('html, body').animate({
             scrollTop: $('#header').offset().top
@@ -97,10 +105,21 @@ $(document).ready(function (){
         return false;
     });
 
+
+    function Scedhule(){
+      if (document.getElementById('scedh').style.opacity==1){
+        console.log('yea');
+        $('.m_sced').css({'pointer-events':'none'});
+      } else{
+        console.log('nope');
+        $('.m_sced').css({'pointer-events':'all'});
+      }
+    }
+    let timerId = setInterval(() => Scedhule(), 500);
     /**
     * Animate:Breeze
     */
-      let line = document.querySelectorAll('.top_vawe');
+      let line = document.querySelectorAll('.top_breeze');
       let size = 0;
       setInterval(function(){
       UpdateLine();

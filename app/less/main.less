@@ -261,8 +261,7 @@ header{
             max-width: 100%;
             height: 100% !important;
             background: #fff;
-            min-height: 100vh;
-            padding-bottom: 20px;
+            padding-bottom: 80px;
             .mob{
                 max-width: 320px;
                 margin: 0 auto;
@@ -292,7 +291,7 @@ main{
         padding-top: 200px;
         .top_vawe{
             position: absolute;
-            top: -10px;
+            top: -20px;
             left: 0;
             background: url(../img/vawe_up.png);
             background-repeat: repeat-x;
@@ -304,12 +303,38 @@ main{
             // -o-animation: mover1 5s ease-in-out forwards infinite;
             // animation: mover1 5s ease-in-out forwards infinite;
         }
+        .white_vawe{
+            position: absolute;
+            top: -26px;
+            left: 0;
+            background: url(../img/white-vawe-top.png);
+            background-repeat: repeat-x;
+            width: 100%;
+            height: 176px;
+            transition: all 0.4s;
+        }
+        .white_vawe_bottom{
+            position: absolute;
+            bottom: -65px;
+            left: 0;
+            background: url(../img/white-vawe-bottom.png);
+            background-repeat: repeat-x;
+            width: 100%;
+            height: 281px;
+            transition: all 0.4s;
+        }
         @media(max-width:768px){
             .top_vawe{
-                top: -29px;
+                top: -36px;
             }
             .bottom_vawe{
                 bottom: -126px !important;
+            }
+            .white_vawe{
+                top: -55px;
+            }
+            .white_vawe_bottom{
+                bottom: -120px;
             }
         }
         .bottom_vawe{
@@ -1567,11 +1592,12 @@ footer{
                     }
                     .item_title{
                         margin-top: 17px;
-                        margin-bottom: 13px;
+                        margin-bottom: 9px;
                         font-size: 14px;
                     }
                     .item_subtitle{
                         font-size: 14px;
+                        line-height: 21px;
                     }
                 }
             }
@@ -1630,6 +1656,7 @@ footer{
                 width: 320px;
                 margin: 0 auto;
                 display: block;
+                padding-right: 15px;
                 table{
                     margin-bottom: 33px;
                     th{
@@ -1747,7 +1774,7 @@ footer{
         .footer_wrapper{
             max-width: 320px;
             flex-direction: column;
-
+            background:linear-gradient(90deg, #36D1DC -239.12%, #5B87E5 361.82%);
             .footer_column{
                 width: 100%;
                 position: relative;
@@ -1896,6 +1923,10 @@ footer{
             }
         }
         .promotions{
+            margin-bottom: unset;
+            .promotions_title h2{
+                font-size: 20px;
+            }
             .msee_all{
                 border:none;
                 display:flex;
@@ -1916,7 +1947,12 @@ footer{
             }
         }
         .services{
-            max-width: 320px;
+            max-width: 290px;
+            margin-top: 34px;
+            margin-bottom: 43px;
+            .services_title{
+                font-size: 20px;
+            }
             .services_slider{
                 .services_container{
                     max-width: 320px !important;
@@ -1934,6 +1970,9 @@ footer{
                             padding-right: 5px;
                         }
                     }
+                }
+                .services_navigation{
+                    display: none;
                 }
                 .swiper-pagination{
                     display:block;
@@ -1953,7 +1992,7 @@ footer{
             }
         }
         .amusement{
-            max-width: 320px;
+            max-width: 290px;
             margin-bottom:28px;
             .amusement_slider{
                 margin: 0 auto;
@@ -1963,7 +2002,6 @@ footer{
                         .slider{
                             width: 287px !important;
                             height: 197px;
-                            margin-left: 20px;
                             img{
                                 width: 287px;
                                 height: 197px;
@@ -1974,12 +2012,12 @@ footer{
                         height: 60px;
                     }
                     .vawe{
-                        right: 0;
-                        top: 0;
+                        right: 20px;
+                        top: -17px;
                     }
                     .vawe_bottom{
-                        left: 0;
-                        bottom: 0;
+                        left: -13px;
+                        bottom: -19px;
                     }
                 }
             }
@@ -2085,7 +2123,7 @@ footer{
         }
 
         .footer_backvawe{
-            top: -47px;
+            top: -53px;
         }
     }
     .footer_wrapper{
